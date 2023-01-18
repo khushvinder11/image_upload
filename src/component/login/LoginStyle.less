@@ -1,15 +1,28 @@
-.form-page {
+.login-page {
   width: 100%;
   height: 100vh;
+  display: grid;
+  place-items: center;
+
+  .login_container {
+    width: 420px;
+    height: 320px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+  }
 
   .ant-form-horizontal {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 115px;
+    // margin-top: 110px;
 
     .ant-form-item-row {
       flex-direction: column;
+
+      .ant-form-item-required {
+        margin-top: 15px;
+      }
 
       .ant-form-item-control-input {
         width: 380px;
@@ -20,13 +33,17 @@
       }
 
       .ant-form-item-control {
-        margin-bottom: 28px;
+        margin-bottom: 26px;
+      }
+
+      .ant-btn {
+        margin-left: 23px;
       }
     }
 
     .ant-form-horizontal {
       width: 50%;
-      margin: 90px auto;
+      // margin: 90px auto;
     }
   }
 }

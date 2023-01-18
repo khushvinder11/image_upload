@@ -4,17 +4,23 @@ import reactLogo from "./assets/react.svg";
 import Admin from "./component/Adminpage/adminpage";
 import LoginPage from "./component/login/login";
 import FileUpload from "./component/FileUpload/FileUpload";
+import SingUpPage from "./component/signUp/SignUp";
 // import Video from "./component/video";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Admin />,
+    element: <SingUpPage />,
   },
 
   {
     path: "/loginpage",
     element: <LoginPage />,
+  },
+
+  {
+    path: "/admin",
+    element: <Admin />,
   },
 
   {
