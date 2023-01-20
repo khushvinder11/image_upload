@@ -13,7 +13,7 @@ const SingUpPage = () => {
   const onFinish = (values) => {
     // console.log("Success:", values);
     setUserInfo(values);
-    navigate("/admin");
+    navigate("/loginpage");
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);

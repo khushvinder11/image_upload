@@ -5,7 +5,7 @@ import Admin from "./component/Adminpage/adminpage";
 import LoginPage from "./component/login/login";
 import FileUpload from "./component/FileUpload/FileUpload";
 import SingUpPage from "./component/signUp/SignUp";
-// import Video from "./component/video";
+import Video from "./component/video";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
@@ -34,7 +34,7 @@ function App() {
     <RouterProvider router={router} />
     // <div>
     //   <Admin />
-    //   <LoginPage />
+    // <Video />
     // </div>
   );
 }
