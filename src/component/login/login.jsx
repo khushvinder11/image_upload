@@ -2,13 +2,18 @@ import React, { useState } from "react";
 import { Button, Checkbox, Form, Input } from "antd";
 import "./LoginStyle.less";
 import Navbar from "../Navbar/Navbar";
+import { useNavigate } from "react-router";
 
 const LoginPage = () => {
   const [signUpInfo, setSignUpInfo] = useState();
+
+  const navigate = useNavigate();
+
   console.log(signUpInfo, "signinfopage");
   const onFinish = (values) => {
     console.log("Success:", values);
     setSignUpInfo(values);
+    navigate("/admin");
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
