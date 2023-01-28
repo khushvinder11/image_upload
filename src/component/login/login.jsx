@@ -23,7 +23,7 @@ const LoginPage = () => {
       {/* <Navbar /> */}
       <div className="login-page">
         <div className="login_container">
-          <h1 style={{ textAlign: "center" }}>Login</h1>
+          <h1>Login</h1>
           <Form
             name="basic"
             labelCol={{

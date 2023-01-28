@@ -38,7 +38,7 @@ const SingUpPage = () => {
     >
       {/* <Navbar /> */}
       <div className="sign_up_container">
-        <h1 style={{ textAlign: "center" }}>Register</h1>
+        <h1>Register</h1>
         <Form
           name="basic"
           labelCol={{
@@ -109,61 +109,6 @@ const SingUpPage = () => {
               <Radio value={"Other"}>Other</Radio>
             </Radio.Group>
           </Form.Item>
-
-          <Form.Item
-            label="Image Type"
-            name="Image Type"
-            rules={[
-              {
-                required: true,
-                message: "Please input your username!",
-              },
-            ]}
-          >
-            <Select
-              showSearch
-              style={{
-                width: 380,
-              }}
-              placeholder="Search to Select"
-              optionFilterProp="children"
-              filterOption={(input, option) =>
-                (option?.label ?? "").includes(input)
-              }
-              filterSort={(optionA, optionB) =>
-                (optionA?.label ?? "")
-                  .toLowerCase()
-                  .localeCompare((optionB?.label ?? "").toLowerCase())
-              }
-              options={[
-                {
-                  value: "Animal",
-                  label: "Animal",
-                },
-                {
-                  value: "Flower",
-                  label: "Flower",
-                },
-                {
-                  value: "Space",
-                  label: "Space",
-                },
-                {
-                  value: "Human",
-                  label: "Human",
-                },
-                {
-                  value: "Movie",
-                  label: "Movie",
-                },
-                {
-                  value: "Girls",
-                  label: "Girls",
-                },
-              ]}
-            />
-          </Form.Item>
-
           <Form.Item
             wrapperCol={{
               offset: 8,
