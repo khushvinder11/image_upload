@@ -6,6 +6,7 @@ import LoginPage from "./component/login/login";
 import FileUpload from "./component/FileUpload/FileUpload";
 import SingUpPage from "./component/signUp/SignUp";
 import Video from "./component/video";
+import TagPage from "./component/TagPage/TagPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
   {
     path: "/admin",
     element: <Admin />,
+  },
+
+  {
+    path: "/tagpage",
+    element: <TagPage />,
   },
 
   {

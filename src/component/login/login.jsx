@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Checkbox, Form, Input } from "antd";
 import "./LoginStyle.less";
-import Navbar from "../Navbar/Navbar";
+// import Navbar from "../Navbar/Navbar";
 import { useNavigate } from "react-router";
 
 const LoginPage = () => {
@@ -20,7 +20,7 @@ const LoginPage = () => {
   };
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="login-page">
         <div className="login_container">
           <h1 style={{ textAlign: "center" }}>Login</h1>

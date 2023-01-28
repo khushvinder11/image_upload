@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Upload } from "antd";
+import { Upload, Dropdown, Space } from "antd";
 import ImgCrop from "antd-img-crop";
+import { DownOutlined } from "@ant-design/icons";
 import Navbar from "../Navbar/Navbar";
 import "./FileUploadStyle.less";
 
@@ -24,20 +25,55 @@ const FileUpload = () => {
     const imgWindow = window.open(src);
     imgWindow?.document.write(image.outerHTML);
   };
+
+  // dropdown button ....
+  const items = [
+    {
+      label: <a href="https://www.antgroup.com">1st menu item</a>,
+      key: "0",
+    },
+    {
+      label: <a href="https://www.aliyun.com">2nd menu item</a>,
+      key: "1",
+    },
+    {
+      type: "divider",
+    },
+    {
+      label: "3rd menu item",
+      key: "3",
+    },
+  ];
   return (
     <div className="upload_page">
       <Navbar />
-      <ImgCrop rotate>
-        <Upload
-          action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
-          listType="picture-card"
-          fileList={fileList}
-          onChange={onChange}
-          onPreview={onPreview}
+      <div className="upload-container">
+        <ImgCrop rotate>
+          <Upload
+            action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+            listType="picture-card"
+            fileList={fileList}
+            onChange={onChange}
+            onPreview={onPreview}
+          >
+            {fileList.length < 5 && "+ Upload"}
+          </Upload>
+        </ImgCrop>
+        {/* ........... */}
+        <Dropdown
+          menu={{
+            items,
+          }}
+          trigger={["click"]}
         >
-          {fileList.length < 5 && "+ Upload"}
-        </Upload>
-      </ImgCrop>
+          <a onClick={(e) => e.preventDefault()}>
+            <Space>
+              Click me
+              <DownOutlined />
+            </Space>
+          </a>
+        </Dropdown>
+      </div>
     </div>
   );
 };
