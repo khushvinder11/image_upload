@@ -1,4 +1,4 @@
-import { Select, Button, Modal, Table } from "antd";
+import { Select, Button, Modal, Table, Empty } from "antd";
 import { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import {
@@ -63,6 +63,11 @@ const TagPage = () => {
     "Maan",
   ];
 
+  console.log(
+    " a b    c d e   f g              ksii  ".replaceAll(" ", ""),
+    "remove space"
+  );
+
   return (
     <>
       <Navbar />
@@ -71,7 +76,7 @@ const TagPage = () => {
           return (
             <div
               className="tag-div"
-              style={{ borderRight: "1px solid #8c8585" }}
+              style={{ borderRight: "1px solid #aca6a4" }}
             >
               <div className="tagpage_inner_div">
                 <span className="tagpage_header">
@@ -86,10 +91,42 @@ const TagPage = () => {
                 </span>
               </div>
               <div className="tag-items">
-                {datalist.map((v, key) => {
+                {datalist.length ? (
+                  datalist.map((v, key) => {
+                    return (
+                      <div className="tag-name">
+                        <span className="item-name">
+                          {key + 1}.
+                          <h4
+                            style={{
+                              cursor: "pointer",
+                              display: "inline-block",
+                            }}
+                          >
+                            {v}
+                          </h4>
+                        </span>
+                        <span className="tag-del-edi-icon">
+                          <EditOutlined
+                            onClick={() => {
+                              editItme(key);
+                              setIsModalOpen(true);
+                              setAddEdit("Edit");
+                              setModalTitle(val);
+                            }}
+                          />
+                          <DeleteOutlined onClick={() => deleteItme(v.key)} />{" "}
+                        </span>
+                      </div>
+                    );
+                  })
+                ) : (
+                  <Empty />
+                )}
+                {/* {datalist.map((v, key) => {
                   return (
                     <div className="tag-name">
-                      <span>
+                      <span className="item-name">
                         {key + 1}.
                         <h4
                           style={{ cursor: "pointer", display: "inline-block" }}
@@ -110,7 +147,7 @@ const TagPage = () => {
                       </span>
                     </div>
                   );
-                })}
+                })} */}
               </div>
             </div>
           );

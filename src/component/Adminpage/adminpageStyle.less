@@ -2,15 +2,16 @@
   .ant-layout-sider {
     background: none;
     border-right: 1px solid #d8cccc;
-    // border-right: 1px solid rgb(170, 168, 168);
-    // position: sticky;
-    // top: 200px;
+    max-width: 167px !important;
+    min-width: 167px !important;
+    width: 167px !important;
 
     .ant-layout-sider-children {
-      width: 199px;
+      width: 167px;
+      // width: 199px;
       height: 100vh;
       position: fixed;
-      top: 93px;
+      top: 81px;
 
       .ant-list-bordered {
         // border: none !important;
@@ -28,23 +29,18 @@
   }
 
   .ant-layout-content {
-    // height: 100vh;
-    padding: 0 20px;
+    padding: 0 4px;
     display: flex;
     gap: 5px;
     flex-wrap: wrap;
     margin: 0 0 30px;
-    // background-color: #06141f;
 
     .image-container {
       // width: 350px;
       // width: 308px;
-      width: 270px;
+      width: 288px;
       height: 240px;
       object-fit: cover;
-      // box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-      // width: 250px;
-      // margin-bottom: 10px;
 
       .ant-image {
         width: 100%;
@@ -101,67 +97,4 @@
       }
     }
   }
-
-  // .gallery {
-  //   display: flex;
-  //   padding: 2px;
-  //   transition: 0.3s;
-
-  //   &:hover &__image {
-  //     filter: grayscale(1);
-  //   }
-
-  //   &__column {
-  //     display: flex;
-  //     flex-direction: column;
-  //     width: 25%;
-  //   }
-
-  //   &__link {
-  //     margin: 2px;
-  //     overflow: hidden;
-
-  //     &:hover {
-  //       .gallery__image {
-  //         filter: grayscale(0);
-  //       }
-
-  //       .gallery__caption {
-  //         opacity: 1;
-  //       }
-  //     }
-  //   }
-
-  //   &__thumb {
-  //     position: relative;
-  //   }
-
-  //   &__image {
-  //     display: block;
-  //     width: 100%;
-  //     transition: 0.3s;
-
-  //     &:hover {
-  //       transform: scale(1.1);
-  //     }
-  //   }
-
-  //   &__caption {
-  //     position: absolute;
-  //     bottom: 0;
-  //     left: 0;
-  //     padding: 25px 15px 15px;
-  //     width: 100%;
-  //     font-family: "Raleway", sans-serif;
-  //     font-size: 16px;
-  //     color: white;
-  //     opacity: 0;
-  //     background: linear-gradient(
-  //       0deg,
-  //       rgba(0, 0, 0, 0.5) 0%,
-  //       rgba(255, 255, 255, 0) 100%
-  //     );
-  //     transition: 0.3s;
-  //   }
-  // }
 }

@@ -12,7 +12,7 @@
   .tag-div {
     width: 25%;
     height: 100%;
-    padding: 20px;
+    padding: 16px;
     // overflow: auto;
 
     &::-webkit-scrollbar {
@@ -109,13 +109,23 @@
         justify-content: space-between;
         align-items: center;
 
-        h4 {
-          font-weight: 300;
+        .item-name {
+          font-size: 14px;
+
+          h4 {
+            font-weight: 300;
+            margin-left: 4px;
+
+            &:hover {
+              text-decoration: underline;
+              color: blue;
+            }
+          }
         }
 
         .tag-del-edi-icon {
           display: flex;
-          gap: 12px;
+          gap: 7px;
           font-size: 14px;
           color: #353333;
 
